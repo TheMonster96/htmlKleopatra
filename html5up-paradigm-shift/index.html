@@ -1,0 +1,463 @@
+<!DOCTYPE HTML>
+<!--
+	Paradigm Shift by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Kleopatra</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Intro -->
+					<section class="intro">
+						<header>
+							<h1>Kleopatra GPG</h1>
+							<p><br> <a href="https://docs.kde.org/stable5/en/kleopatra/kleopatra/index.html">Manuale Kleopatra</a></p>
+							<ul class="actions">
+								<li><a href="#first" class="arrow scrolly"><span class="label">Next</span></a></li>
+							</ul>
+						</header>
+						
+					</section>
+
+				<!-- Section -->
+					<section id="first">
+						<header>
+							<h2>Caratteristiche principali</h2>
+						</header>
+						<div class="content">
+							<p> Kleopatra è un'interfaccia utente grafica (GUI) per GPG (GNU Privacy Guard), uno strumento di crittografia open-source che implementa il protocollo OpenPGP. GPG è utilizzato per proteggere la privacy e la sicurezza dei dati, garantendo la confidenzialità, l'autenticità e l'integrità delle comunicazioni digitali. Kleopatra semplifica l'uso di GPG, rendendo più accessibile la gestione delle chiavi crittografiche e l'esecuzione di operazioni crittografiche.</p>
+								
+							<p> <br><br><br>	Gestione delle Chiavi:</p>	
+								
+								<ul class="feature-icons">
+									<li class="icon solid fa-laptop">	Creazione di Chiavi: Kleopatra permette di generare nuove coppie di chiavi pubbliche/private.</li>
+									<li class="icon solid fa-laptop">	Importazione/Esportazione di Chiavi: È possibile importare chiavi pubbliche da altri utenti e esportare le proprie chiavi per condividerle.</li>
+									<li class="icon solid fa-laptop">	Gestione del Portachiavi: Kleopatra gestisce il portachiavi di GPG, visualizzando tutte le chiavi disponibili e permettendo di gestirle (ad esempio, revocare, eliminare, o aggiornare le chiavi).</li>
+									
+								</ul>
+
+								<p> <br><br>	Operazioni Crittografiche:</p>
+
+								<ul class="feature-icons">
+									<li class="icon solid fa-laptop">	Cifratura e Decifratura: Kleopatra permette di crittografare file o messaggi per garantire la loro confidenzialità e di decifrarli quando necessario.</li>
+									<li class="icon solid fa-laptop">	Firma Digitale: È possibile firmare digitalmente file o messaggi per garantire l'autenticità e l'integrità del contenuto.</li>
+									<li class="icon solid fa-laptop">	Verifica delle Firme: Kleopatra permette di verificare la firma digitale di un file o messaggio per confermare l'autenticità e l'integrità.</li>
+								</ul>
+
+								<p> <br><br>	Interfaccia Utente Intuitiva:  </p>
+
+								<ul class="feature-icons">
+									<li class="icon solid fa-laptop">GUI User-Friendly: Kleopatra offre un'interfaccia grafica intuitiva che rende più facile l'uso di GPG per utenti non esperti.	</li>
+								</ul>
+							</p>
+							<span class="image main"><img src="images/kleopatra_logo.png" alt="" /></span>
+						</div>
+					</section>
+
+				<!-- Section -->
+					<section>
+						<header>
+							<h2>Utilizzi nel mondo reale</h2>
+						</header>
+						<div class="content">
+							<p> <br><br><br>	Protezione della Privacy:</p>	
+								
+								<ul class="feature-icons">
+									<li class="icon solid fa-laptop">	Comunicazioni Elettroniche: Kleopatra è utilizzato per crittografare email e messaggi instantanei per proteggere la privacy delle comunicazioni.</li>
+									<li class="icon solid fa-laptop">	Archiviazione Sicura dei Dati: I file sensibili possono essere crittografati per proteggere i dati da accessi non autorizzati.</li>
+								</ul>
+
+								<p> <br><br>	Autenticazione e Integrità:</p>
+
+								<ul class="feature-icons">
+									<li class="icon solid fa-laptop">	Firma Digitale: Kleopatra permette di firmare digitalmente documenti per garantire che siano autentici e non siano stati alterati.</li>
+									<li class="icon solid fa-laptop">	Verifica delle Firme: È possibile verificare la firma digitale di un documento per confermare l'autenticità e l'integrità.</li>
+								</ul>
+
+								<p> <br><br>	Sicurezza delle Comunicazioni:  </p>
+
+								<ul class="feature-icons">
+									<li class="icon solid fa-laptop">Collaborazione Sicura: Kleopatra è utilizzato in ambienti di lavoro per garantire la sicurezza delle comunicazioni tra colleghi.</li>
+									<li class="icon solid fa-laptop">Comunicazioni con Enti Governativi: Può essere utilizzato per comunicare in modo sicuro con enti governativi o istituzioni che richiedono crittografia.</li>
+								</ul>
+							</p>
+						</div>
+					</section>
+
+				<!-- Section -->
+					<section>
+						<header>
+							<h2>Come funziona il protocollo PGP</h2>
+						</header>
+						<div class="content">
+							<p><strong>Il protocollo GPG, che sta per GNU Privacy Guard, utilizza la tecnica di crittaggio asimmetrica, cioè usando una combinazione di 2 chiavi, una privata e una pubblica. Come implicano i nomi, la chiave pubblica è visibile nel canale di trasmissione, mentre la chiave privata è isolata e accessibile solo dal proprietario, cioè l'utente stesso.</p>
+							<!-- Section -->
+							<p> <br>	Funzionamento di crittaggio con le chiavi:</p>
+							<br> <p>	Come detto in precedenza, si opera tramite una combinazione di una chiave pubblica e una chiave privata. La chiave pubblica serve per crittare i messaggi che si vogliono spedire, mentre la chiave privata serve invece per decrittare e firmare (cioè convalidare) i messaggi ricevuti. 
+										Per crittare i nostri messaggi però non dovremo usare la nostra chiave pubblica, bensì la chiave pubblica dell'individuo a cui vogliamo spedire un messaggio, così che egli, dopo aver ricevuto il messaggio, possa decrittarlo con la sua chiave privata.
+										Naturalmente però potrebbe accadere che qualche individuo malintenzionato possa prendere la nostra chiave pubblica e usarla per cifrare dei messaggi e mandarli al nostro destinatario. Ed è qui che entra in gioco la firma elettronica dei messaggi. 
+										La firma elettronica non è altro che un metodo di convalidatura della validità del mittente del messaggio. Per effetturare la firma elettronica dovremo usare anche la nostra chiave privata oltre che la chiave pubblica del destinatario.
+										Il destinatario, per verificare che il mittente del messaggio siamo noi, userà la nostra chiave pubblica per decifrare la firma elettronica e la chiave pubblica per decifrare il messaggio. Nel caso la firma elettronica non sia scritta da noi, risulterà evidente che qualcuno di malintenzioanto abbia intercettato la comunicazione
+							</p>		
+
+						</div>
+					</section>
+
+					<br>
+
+					<section>
+						<header>
+							<h2>Come funziona Kleopatra</h2>
+						</header>
+						<div class="content">
+							<p> Questa è la schermata principale di Kleopatra. Come possiamo vedere in primo piano abbiamo 2 caselle: Nuova coppia di chiavi e Importa.
+								Questi 2 comandi ci permetteranno infatti di creare una coppia di chiave pubblica e di chiave primaria, oppure importarla tramite file appositi.
+							</p>
+							<span class="image main"><img src="images/Screenshot (1985).png" alt="" /></span>
+
+							<p>
+								Dopo aver cliccato su "Nuova coppia di chiavi", ci sarà mostrato questo prompt. Come possiamo vedere nel prompt ci viene chiesto un Nome e un indirizzo di posta elettronica a piacere.
+								Abbiamo anche l'opzione di proteggere la coppia di chiavi generata tramite password, che in questo caso salteremo.
+							</p>
+
+							<span class="image main"><img src="images/Screenshot (1986).png" alt=""</span>
+							
+							<br>
+
+							<p> 
+								Dopo aver generato la coppia di chiavi, saremo reindirizzati a questa schermata. Come possiamo vedere è riportata la lista dei nostri certificati.
+								Se guardiamo attentamente il certificato che abbiamo appena creato vedremo il nome, l'email, lo stato della certificazione, la data di validità	e l'ID del certificato
+								
+							</p>
+							
+							<span class="images main"><img src="images/Screenshot (1987).png" alt=""></span>
+							<p><strong></p>
+							<!-- Section -->
+							<p> <br><br><br>	</p>
+							<br> <p>	
+							</p>		
+
+							<!-- Section -->
+								<section>
+									<header>
+										<h3></h3>
+										<p></p>
+									</header>
+									
+								</section>
+
+							<!-- Section -->
+								<section>
+									<header>
+										<h3>Lorem gravida</h3>
+										<p>Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aenean ornare velit lacus, ac varius sed enim lorem ullamcorper dolore.  ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis.</p>
+									</header>
+									<div class="content">
+										<div class="gallery">
+											<a href="images/gallery/fulls/08.jpg" class="portrait"><img src="images/gallery/thumbs/08.jpg" alt="" /></a>
+											<a href="images/gallery/fulls/09.jpg" class="portrait"><img src="images/gallery/thumbs/09.jpg" alt="" /></a>
+											<a href="images/gallery/fulls/10.jpg" class="landscape"><img src="images/gallery/thumbs/10.jpg" alt="" /></a>
+										</div>
+									</div>
+								</section>
+
+						</div>
+					</section>
+
+				<!-- Section -->
+					
+
+				<!-- Elements -->
+				<!--
+					<section>
+						<header>
+							<h2>Elements</h2>
+						</header>
+						<div class="content">
+
+							<section>
+								<header>
+									<h3>Text</h3>
+								</header>
+								<div class="content">
+									<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
+									This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
+									This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
+									<hr />
+									<h2>Heading Level 2</h2>
+									<h3>Heading Level 3</h3>
+									<h4>Heading Level 4</h4>
+									<h5>Heading Level 5</h5>
+									<hr />
+									<h5>Blockquote</h5>
+									<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
+									<h5>Preformatted</h5>
+									<pre><code>i = 0;
+
+while (!deck.isInOrder()) {
+  print 'Iteration ' + i;
+  deck.shuffle();
+  i++;
+}
+
+print 'Sorted in ' + i + ' iterations.';</code></pre>
+								</div>
+							</section>
+
+							<section>
+								<header>
+									<h3>Lists</h3>
+								</header>
+								<div class="content">
+
+									<h4>Unordered</h4>
+									<ul>
+										<li>Dolor pulvinar etiam.</li>
+										<li>Sagittis adipiscing.</li>
+										<li>Felis enim feugiat.</li>
+									</ul>
+
+									<h4>Alternate</h4>
+									<ul class="alt">
+										<li>Dolor pulvinar etiam.</li>
+										<li>Sagittis adipiscing.</li>
+										<li>Felis enim feugiat.</li>
+									</ul>
+
+									<h4>Ordered</h4>
+									<ol>
+										<li>Dolor pulvinar etiam.</li>
+										<li>Etiam vel felis viverra.</li>
+										<li>Felis enim feugiat.</li>
+										<li>Dolor pulvinar etiam.</li>
+										<li>Etiam vel felis lorem.</li>
+										<li>Felis enim et feugiat.</li>
+									</ol>
+									<h4>Icons</h4>
+									<ul class="icons">
+										<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+										<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
+									</ul>
+
+									<h4>Actions</h4>
+									<ul class="actions">
+										<li><a href="#" class="button primary">Default</a></li>
+										<li><a href="#" class="button">Default</a></li>
+									</ul>
+									<ul class="actions stacked">
+										<li><a href="#" class="button primary">Default</a></li>
+										<li><a href="#" class="button">Default</a></li>
+									</ul>
+								</div>
+							</section>
+
+							<section>
+								<header>
+									<h3>Table</h3>
+								</header>
+								<div class="content">
+									<h4>Default</h4>
+									<div class="table-wrapper">
+										<table>
+											<thead>
+												<tr>
+													<th>Name</th>
+													<th>Description</th>
+													<th>Price</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>Item One</td>
+													<td>Ante turpis integer aliquet porttitor.</td>
+													<td>29.99</td>
+												</tr>
+												<tr>
+													<td>Item Two</td>
+													<td>Vis ac commodo adipiscing arcu aliquet.</td>
+													<td>19.99</td>
+												</tr>
+												<tr>
+													<td>Item Three</td>
+													<td> Morbi faucibus arcu accumsan lorem.</td>
+													<td>29.99</td>
+												</tr>
+												<tr>
+													<td>Item Four</td>
+													<td>Vitae integer tempus condimentum.</td>
+													<td>19.99</td>
+												</tr>
+												<tr>
+													<td>Item Five</td>
+													<td>Ante turpis integer aliquet porttitor.</td>
+													<td>29.99</td>
+												</tr>
+											</tbody>
+											<tfoot>
+												<tr>
+													<td colspan="2"></td>
+													<td>100.00</td>
+												</tr>
+											</tfoot>
+										</table>
+									</div>
+
+									<h4>Alternate</h4>
+									<div class="table-wrapper">
+										<table class="alt">
+											<thead>
+												<tr>
+													<th>Name</th>
+													<th>Description</th>
+													<th>Price</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>Item One</td>
+													<td>Ante turpis integer aliquet porttitor.</td>
+													<td>29.99</td>
+												</tr>
+												<tr>
+													<td>Item Two</td>
+													<td>Vis ac commodo adipiscing arcu aliquet.</td>
+													<td>19.99</td>
+												</tr>
+												<tr>
+													<td>Item Three</td>
+													<td> Morbi faucibus arcu accumsan lorem.</td>
+													<td>29.99</td>
+												</tr>
+												<tr>
+													<td>Item Four</td>
+													<td>Vitae integer tempus condimentum.</td>
+													<td>19.99</td>
+												</tr>
+												<tr>
+													<td>Item Five</td>
+													<td>Ante turpis integer aliquet porttitor.</td>
+													<td>29.99</td>
+												</tr>
+											</tbody>
+											<tfoot>
+												<tr>
+													<td colspan="2"></td>
+													<td>100.00</td>
+												</tr>
+											</tfoot>
+										</table>
+									</div>
+								</div>
+							</section>
+
+							<section>
+								<header>
+									<h3>Buttons</h3>
+								</header>
+								<div class="content">
+									<ul class="actions">
+										<li><a href="#" class="button primary">Primary</a></li>
+										<li><a href="#" class="button">Default</a></li>
+									</ul>
+									<ul class="actions">
+										<li><a href="#" class="button large">Large</a></li>
+										<li><a href="#" class="button">Default</a></li>
+										<li><a href="#" class="button small">Small</a></li>
+									</ul>
+									<ul class="actions">
+										<li><a href="#" class="button primary icon solid fa-download">Icon</a></li>
+										<li><a href="#" class="button icon solid fa-download">Icon</a></li>
+									</ul>
+									<ul class="actions">
+										<li><span class="button primary disabled">Disabled</span></li>
+										<li><span class="button disabled">Disabled</span></li>
+									</ul>
+								</div>
+							</section>
+
+							<section>
+								<header>
+									<h3>Form</h3>
+								</header>
+								<div class="content">
+									<form method="post" action="#">
+										<div class="fields">
+											<div class="field half">
+												<label for="demo-name">Name</label>
+												<input type="text" name="demo-name" id="demo-name" value="" placeholder="Jane Doe" />
+											</div>
+											<div class="field half">
+												<label for="demo-email">Email</label>
+												<input type="email" name="demo-email" id="demo-email" value="" placeholder="jane@untitled.tld" />
+											</div>
+											<div class="field">
+												<label for="demo-category">Category</label>
+												<select name="demo-category" id="demo-category">
+													<option value="">-</option>
+													<option value="1">Manufacturing</option>
+													<option value="1">Shipping</option>
+													<option value="1">Administration</option>
+													<option value="1">Human Resources</option>
+												</select>
+											</div>
+											<div class="field half">
+												<input type="radio" id="demo-priority-low" name="demo-priority" checked>
+												<label for="demo-priority-low">Low</label>
+											</div>
+											<div class="field half">
+												<input type="radio" id="demo-priority-high" name="demo-priority">
+												<label for="demo-priority-high">High</label>
+											</div>
+											<div class="field half">
+												<input type="checkbox" id="demo-copy" name="demo-copy">
+												<label for="demo-copy">Email me a copy</label>
+											</div>
+											<div class="field half">
+												<input type="checkbox" id="demo-human" name="demo-human" checked>
+												<label for="demo-human">Not a robot</label>
+											</div>
+											<div class="field">
+												<label for="demo-message">Message</label>
+												<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
+											</div>
+										</div>
+										<ul class="actions">
+											<li><input type="submit" value="Send Message" class="primary" /></li>
+											<li><input type="reset" value="Reset" /></li>
+										</ul>
+									</form>
+								</div>
+							</section>
+
+						</div>
+					</section>
+				-->
+
+				<!-- Section -->
+					
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
