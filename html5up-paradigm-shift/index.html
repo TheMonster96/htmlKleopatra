@@ -104,11 +104,11 @@
 							<p><strong>Il protocollo GPG, che sta per GNU Privacy Guard, utilizza la tecnica di crittaggio asimmetrica, cioè usando una combinazione di 2 chiavi, una privata e una pubblica. Come implicano i nomi, la chiave pubblica è visibile nel canale di trasmissione, mentre la chiave privata è isolata e accessibile solo dal proprietario, cioè l'utente stesso.</p>
 							<!-- Section -->
 							<p> <br>	Funzionamento di crittaggio con le chiavi:</p>
-							<br> <p>	Come detto in precedenza, si opera tramite una combinazione di una chiave pubblica e una chiave privata. La chiave pubblica serve per crittare i messaggi che si vogliono spedire, mentre la chiave privata serve invece per decrittare e firmare (cioè convalidare) i messaggi ricevuti. 
-										Per crittare i nostri messaggi però non dovremo usare la nostra chiave pubblica, bensì la chiave pubblica dell'individuo a cui vogliamo spedire un messaggio, così che egli, dopo aver ricevuto il messaggio, possa decrittarlo con la sua chiave privata.
+							<br> <p>	Come detto in precedenza, si opera tramite una combinazione di una chiave pubblica e una chiave privata. La chiave pubblica serve per cifrare i messaggi che si vogliono spedire, mentre la chiave privata serve invece per decifrare i messaggi ricevuti e per firmare (cioè convalidare) i messaggi che vogliamo mandare. 
+										Per cifrare i nostri messaggi però non dovremo usare la nostra chiave pubblica, bensì la chiave pubblica dell'individuo a cui vogliamo spedire un messaggio, così che egli, dopo aver ricevuto il messaggio, possa decifrarlo con la sua chiave privata.
 										Naturalmente però potrebbe accadere che qualche individuo malintenzionato possa prendere la nostra chiave pubblica e usarla per cifrare dei messaggi e mandarli al nostro destinatario. Ed è qui che entra in gioco la firma elettronica dei messaggi. 
-										La firma elettronica non è altro che un metodo di convalidatura della validità del mittente del messaggio. Per effetturare la firma elettronica dovremo usare anche la nostra chiave privata oltre che la chiave pubblica del destinatario.
-										Il destinatario, per verificare che il mittente del messaggio siamo noi, userà la nostra chiave pubblica per decifrare la firma elettronica e la chiave pubblica per decifrare il messaggio. Nel caso la firma elettronica non sia scritta da noi, risulterà evidente che qualcuno di malintenzioanto abbia intercettato la comunicazione
+										La firma elettronica non è altro che un metodo di convalidatura del mittente del messaggio. Per effetturare la firma elettronica dovremo usare la nostra chiave privata oltre che la chiave pubblica del destinatario.
+										Il destinatario, per verificare che il mittente del messaggio siamo noi, userà la nostra chiave pubblica per decifrare la firma elettronica e la chiave pubblica per decifrare il messaggio. Nel caso la firma elettronica non sia scritta da noi, risulterà evidente che qualcuno di malintenzioanto abbia intercettato la comunicazione fingendosi noi.
 							</p>		
 
 						</div>
@@ -146,12 +146,76 @@
 							<br>
 
 							<p>
-								E' una buona usanza fare il backup delle chiavi, per evitare di perdere il certificato nel caso si disinstalli il software. Per effettuare il backup dovremo selezionare il certificato
-								e cliccare su File --> Esporta per fare il backup della chiave pubblica e File --> Copia di sicurezza delle chiavi segrete per eseguire il backup della chiave privata 
+								E' necessario esportare le chiavi per poi dare la chiave pubblica al mittente, ma serve anche per crearne un backup nel caso si disinstalli il software o si perdano i dati, visto che i certificati sono archiviati localmente . Per effettuare il backup dovremo selezionare il certificato
+								e cliccare su File --> Esporta per fare il backup della chiave pubblica e File --> Copia di sicurezza delle chiavi segrete per eseguire il backup della chiave privata.
 							</p>
 							
 							<span class="images main"><img src="images/Screenshot (1988).png"> </span>
+							
+							<p>
+								Chiave privata
+							</p>
 
+							<span class="images main"><img src="images/private_key.png"></span>
+
+							<br>
+
+							<p>
+								 Chiave pubblica
+							</p>
+
+							<span class="images main"><img src="images/public_key.png"</span>
+
+							<br>
+							<p>
+								Naturalmente avremo bisogno di qualcuno con cui scambiare messaggi, perciò, seguendo il procedimento del 2° step, creiamo un nuovo certificato con nome <storng> Saro e posta elettronica saro@gmail.com</storng>. Questo sarà il risultato
+							</p>
+
+							<span class="images main"><img src="images/double_certificate.png"></span>
+
+							<br>
+
+							<p>
+								Adesso esportiamo le chiavi pubbliche e private di Saro.
+							</p>
+							
+							<p>
+								Dopo aver esportato le chiavi di Saro, clicchiamo su Blocco note nella toolbar sulla parte superiore dello schermo.
+							</p>
+
+							<span class="images main"> <img src="images/notepad.png"></span>
+							
+							<br>
+
+							<p>
+								Scriviamo dunque un messaggio, ad esempio "Ciao Saro come stai?", e clicchiamo su Destinatari. Scegliamo quindi Francesco Pavone per firmare, togliamo la spunta su cifra per me e selezioniamo Saro come destinatario.
+							</p>
+
+							<span class="images main"> <img src="images/notepad_step2.png"></span>
+							
+							<br>
+
+							<p>
+								Il risultato sarà simile al seguente. Salviamo quindi il messaggio cifrato in un documento .txt 
+							</p>
+
+							<span class="images main"><img src="images/encrypted_msg.png"></span>
+
+
+							<br>
+								
+							<p>
+								Dato che entrambi i certificati sono salvati sul nostro pc possiamo direttamente cliccare su "Blocco note di decifrazione/verifica", e ci sarà mostrato il messaggio in chiaro e la conferma che siamo stati noi a scrivere il messaggio
+							</p>
+
+							<span class="images main"><img src="images/dectyped_msg.png"></span>
+
+							<br>
+
+							<p>
+								Nel caso volessimo invece, mandarlo al nostro destinatario, che ovviamente opererà su un altro computer, dovremo innanzitutto scambiarci le chiavi pubbliche. Dopodiché il mittente dovrà scrivere e cifrare il messaggio con la nostra chiave pubblica
+								e poi mandarci, tramite email o messaggio, il testo cifrato. Per decifrarlo dovremo seguire gli stessi passaggi della decifratura effettuati nello step precedente 
+							</p>
 							<!-- Section -->
 								<section>
 									<header>
